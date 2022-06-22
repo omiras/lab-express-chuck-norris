@@ -179,6 +179,14 @@ client.search(searchTerm)
     // handle error
   });
 ```
+
+### The Form - Validation
+Set a `pattern` attribute in the input field to validate the input's value:
+
+1. Search term must only include characters and numbers
+2. Search term must be lower than 50 characters
+3. Search term is required
+
 ### Rendering the result
 
 Use the same route to render your result.
