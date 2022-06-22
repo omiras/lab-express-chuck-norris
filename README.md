@@ -53,11 +53,12 @@ Today, we will be building a Chuck Norris joke finder using Express.
 Once you fork this repo, remember to initialize a new project
 
 ```
-$ npm init
+$ npm init -y
 ```
-Type `enter` to approve default settings.
 
 Install `express` into your project and `ejs` to use views. Remember to tell your Express app that EJS will be in charge of rendering the HTML and specify the path where the views will be available.
+
+You'll have also to add a script to be able to init with your server with `npm start`
 
 At the end of the exercise you should have at least four routes:
 
@@ -94,6 +95,15 @@ client.getRandomJoke()
   }).catch((err) => {
     // handle error
   });
+```
+
+You can achieve the same results with the async and await keywords:
+
+```javascript
+app.get("/ruta", async(req,res)=> {
+  let joke = await client.getRandomJoke();
+  consolelog(joke);
+})
 ```
 
 
