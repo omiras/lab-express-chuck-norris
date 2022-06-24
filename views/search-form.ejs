@@ -9,9 +9,10 @@
 
     <h2>Buscar chiste a partir de un texto</h2>
 
-    <form>
+    <form method="get" action="/search-by-text">
         <label for="q">Search by text</label>
-        <input type="text" id="q" name="q">
+        <input type="text" id="q" name="q" required maxlength="50" pattern="[a-zA-Z0-9]+">
+        <input type="submit" value="Buscar">
     </form>
 
 </body>
