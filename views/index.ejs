@@ -2,15 +2,24 @@
 <html lang="en">
 
 <head>
-  <title>The Chuck Norris Joke Department</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+
 </head>
 
 <body>
-  <h1>Random Joke Chuk Norris </h1>
-  <p>
-    <img style="width:200px" src="<%= imageChuck %>" alt="">
-    <%= joke.value %>
-  </p>
+    <header style="background-color: lightblue;">
+        <nav>
+            <ul>
+                <li><a href="/random">Obtener Chiste Random</a></li>
+                <li><a href="/categories">Mostrar Categorías</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Home Page Chuck Norris API</h1>
 </body>
 
 </html>

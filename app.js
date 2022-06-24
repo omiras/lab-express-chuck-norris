@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
 
 app.get("/random", async (req, res) => {
     let joke = await client.getRandomJoke();
-    res.render('index.ejs', {
+    res.render('random.ejs', {
         joke: joke,
         imageChuck: "https://i.ytimg.com/vi/ragowJOi_ig/maxresdefault.jpg"
     })
@@ -47,10 +47,11 @@ app.get("/categories", async (req, res) => {
     if (category) {
         let joke = await client.getRandomJoke(category);
         return res.render('joke-by-category', {
-            joke: joke,
-            category: category
+            category: category,
+            joke: joke
         });
     }
+
 
     let categories = await client.getJokeCategories();
 
@@ -64,5 +65,10 @@ app.get("/categories", async (req, res) => {
         categories: categories
     });
 });
+
+// Iteration 3
+
+// Creamos un nuevo endpoint que renderice el formulario al hacer un GET en /search
+
 
 app.listen(3000);
